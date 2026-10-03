@@ -9,14 +9,16 @@ export interface ProjectData {
   title: string;
   shortTitle: string;
   subtitle: string;
+  period: string;
   category: ("AI / ML" | "Full Stack" | "Healthcare" | "Experiments")[];
   featured: boolean;
-  status: "Live Product" | "Active R&D" | "Validated Model" | "Research Prototype" | "In Development";
+  status: "Live Product" | "Active Platform" | "Production Built";
   tagline: string;
   summary: string;
   overview: string[];
   problem: string;
   solution: string;
+  resumeBullets: string[];
   architectureNodes: ProjectArchitectureNode[];
   architectureSummary: string;
   technologies: string[];
@@ -37,304 +39,212 @@ export interface ProjectData {
 export const projects: ProjectData[] = [
   {
     slug: "healthchain",
-    title: "HealthChain — Healthcare Infrastructure Platform",
+    title: "HealthChain — AI-Powered Healthcare Platform",
     shortTitle: "HealthChain",
-    subtitle: "Decentralized Clinical Access & Tamper-Evident Patient Records",
+    subtitle: "Role-Based Clinical Dashboards & Secure Healthcare Data Workflows",
+    period: "Aug 2025 – Present",
     category: ["Healthcare", "Full Stack"],
     featured: true,
-    status: "Live Product",
-    tagline: "Bridging clinical workflows with tamper-evident record verification and patient identity governance.",
+    status: "Active Platform",
+    tagline: "Connecting Patients, Doctors, Clinical Staff, and Administrators through secure role-based dashboards and real-time application workflows.",
     summary:
-      "A full-stack healthcare ecosystem engineered for real-time clinician dashboards, decentralized patient record lookup, and secure OTP-verified access control.",
+      "A responsive healthcare platform built with React.js, Vite, Tailwind CSS, and React Router, integrating Node.js, Express.js REST APIs, WebSockets, and Firebase Authentication with PostgreSQL and Firestore data stores.",
     overview: [
-      "HealthChain addresses the vulnerability of fragmented electronic medical records (EMR) across clinics and hospitals. The system implements a unified Patient Identifier protocol paired with cryptographic hash integrity to prevent record tampering.",
-      "Clinicians gain authorized read/write access to longitudinal patient histories with sub-second retrieval times, while patients retain granular consent controls through OTP-validated session grants.",
-      "Built with a reactive Next.js 16 frontend, stateless token authorization, and Firestore multi-region clusters to ensure high availability and resilient audit logging.",
+      "Developed a responsive React.js healthcare platform featuring customized, role-based dashboards tailored for Patients, Doctors, Clinical Staff, and Administrators.",
+      "Constructed a modular frontend architecture utilizing React Router and Tailwind CSS, integrating REST APIs and real-time WebSockets for responsive clinical workflows.",
+      "Implemented Firebase Authentication alongside PostgreSQL and Cloud Firestore data pipelines, enforcing strict role-based access controls (RBAC) to ensure secure patient record handling.",
+    ],
+    resumeBullets: [
+      "Developed a responsive React.js healthcare platform with role-based dashboards for Patients, Doctors, Clinical Staff, and Administrators.",
+      "Built reusable React components and modular frontend architecture using React Router and Tailwind CSS, integrating REST APIs and WebSockets for application workflows.",
+      "Implemented Firebase Authentication with PostgreSQL and Firestore data workflows, along with role-based access controls for secure user experiences.",
     ],
     problem:
-      "Healthcare practitioners frequently encounter fragmented medical data silos where critical historical diagnostics, allergy matrices, and prescriptions are inaccessible during emergencies. Traditional centralized portals are vulnerable to silent data modifications and lack explicit patient verification protocols.",
+      "Healthcare facilities struggle with fragmented communication channels between clinical staff, doctors, and patients. Traditional portals lack real-time WebSocket notifications and flexible role-based access controls, resulting in communication bottlenecks and vulnerable record access.",
     solution:
-      "Engineered a zero-trust clinical architecture with a cryptographic record log, multi-factor OTP verification for patient records, and isolated practitioner portals. Clinical actions generate immutable audit signatures, ensuring compliance and diagnosis transparency.",
+      "Engineered an integrated healthcare architecture featuring dedicated portals for each stakeholder, bi-directional WebSocket communication, and hybrid data persistence combining PostgreSQL for relational integrity with Firestore for real-time dashboard updates.",
     architectureNodes: [
-      { name: "Clinician / Patient Client", type: "client", description: "Next.js 16 SPA with role-based viewports" },
-      { name: "Access Gateway", type: "gateway", description: "Stateless JWT token buffer & OTP validation" },
-      { name: "Clinical Service", type: "service", description: "Structured EMR pipeline & audit dispatcher" },
-      { name: "Verification Ledger", type: "ml", description: "SHA-256 record integrity checksum generator" },
-      { name: "Cloud Firestore", type: "storage", description: "Encrypted patient collection with security rules" },
+      { name: "Role-Based Dashboards", type: "client", description: "React.js + Vite + Tailwind CSS with React Router" },
+      { name: "API & WebSocket Gateway", type: "gateway", description: "Express.js REST APIs & WebSocket event dispatchers" },
+      { name: "Auth & RBAC Service", type: "service", description: "Firebase Authentication with claim-based role verification" },
+      { name: "Hybrid Data Layer", type: "storage", description: "PostgreSQL relational schemas & Cloud Firestore real-time store" },
+      { name: "Cloud Infrastructure", type: "infra", description: "Firebase Hosting & Docker containerized backends" },
     ],
     architectureSummary:
-      "Client requests transit through a stateless verification buffer that confirms practitioner role privileges and valid OTP consent tokens. Medical records are serialized with SHA-256 hash checks before persistent storage, creating an audit chain for longitudinal review.",
-    technologies: ["React 19", "Next.js 16", "TypeScript", "Firebase Auth", "Cloud Firestore", "Tailwind CSS", "Web Crypto API"],
+      "Client requests transit through an Express.js gateway validating Firebase Auth tokens. Real-time clinical updates stream via WebSockets, while transactional data persists across PostgreSQL and Firestore with strict RBAC rules.",
+    technologies: ["React.js", "Vite", "Tailwind CSS", "React Router", "Node.js", "Express.js", "REST APIs", "WebSockets", "Firebase", "PostgreSQL", "Firestore"],
     engineeringDecisions: [
       {
-        decision: "Stateless Session Tokens over Sticky Server Sessions",
-        rationale: "Guarantees zero-downtime scaling when multiple clinical staff simultaneously query patient logs during peak hospital hours.",
-        tradeoff: "Requires short-lived tokens and rapid re-verification against revocation lists.",
+        decision: "Hybrid PostgreSQL + Firestore Data Strategy",
+        rationale: "PostgreSQL provides relational consistency for medical audit logs, while Firestore enables instant real-time synchronization for active clinical dashboards.",
+        tradeoff: "Requires coordinating data updates across two storage systems.",
       },
       {
-        decision: "Granular Field-Level Firestore Security Rules",
-        rationale: "Prevents clinical staff from reading unauthorized personal identifying information (PII) beyond diagnostic history.",
-        tradeoff: "More complex query patterns requiring compound indexes.",
+        decision: "WebSockets for Real-Time Clinical Notifications",
+        rationale: "Ensures doctors and clinical staff receive instantaneous alerts regarding patient status without repetitive client polling.",
+        tradeoff: "Demands persistent connection management and reconnection fallback handling.",
       },
     ],
     securityConsiderations: [
-      "Strict separation of Patient PII from clinical diagnostic logs.",
-      "Multi-factor OTP challenge required before decrypting historical consultation records.",
-      "Client-side verification of document checksums to detect data corruption or unauthorized mutation.",
-      "Strict Content Security Policy (CSP) and zero third-party telemetry on medical views.",
+      "Strict Role-Based Access Control (RBAC) isolating patient records across administrative tiers.",
+      "Firebase Auth token validation on all WebSocket handshake and REST request paths.",
+      "Sanitized clinical inputs preventing SQL injection and XSS in consultation notes.",
     ],
     challenges: [
-      "Optimizing complex multi-record join queries within NoSQL document constraints while maintaining sub-300ms UI render times.",
-      "Designing an intuitive clinical emergency override flow without compromising privacy guarantees.",
+      "Designing an ergonomic multi-portal interface that remains clear and rapid under high clinical stress.",
+      "Synchronizing real-time WebSocket states across multiple active doctor and nurse sessions.",
     ],
     outcomes: [
-      "Successfully deployed and operating live on Firebase infrastructure.",
-      "Achieved sub-200ms record retrieval latency across standard broadband connections.",
-      "Established verified OTP handshake flow tested across clinical consultation scenarios.",
+      "Active production deployment serving multi-role healthcare workflows.",
+      "Sub-200ms API response latency and instant WebSocket event propagation.",
+      "Clean modular component library facilitating rapid clinical feature expansion.",
     ],
-    liveUrl: "https://healthcare-edb75.web.app/",
+    liveUrl: "https://healthchain.co.in",
     githubUrl: "https://github.com/chinnaranga",
     metrics: [
-      { label: "Architecture", value: "Role-Based EMR" },
-      { label: "Verification", value: "OTP + Cryptographic" },
-      { label: "Deployment", value: "Firebase Cloud" },
+      { label: "Portals", value: "4 Role Views" },
+      { label: "Data Layer", value: "Postgres + Firestore" },
+      { label: "Real-Time", value: "WebSockets" },
     ],
     nextSlug: "far-find-a-role",
   },
   {
     slug: "far-find-a-role",
-    title: "FAR — Find a Role (AI Career Platform)",
-    shortTitle: "Find a Role",
-    subtitle: "AI-Powered Talent Matching & Automated Career Intelligence",
+    title: "FarFindARole — AI-Powered Recruitment Platform",
+    shortTitle: "FarFindARole",
+    subtitle: "Connecting Students, Universities, Recruiters & Placement Officers",
+    period: "Jan 2025 – Jan 2026",
     category: ["AI / ML", "Full Stack"],
     featured: true,
     status: "Live Product",
-    tagline: "High-performance career discovery platform connecting engineers with verified opportunities through intelligent filtering.",
+    tagline: "AI-powered talent acquisition platform streamlining university hiring through resume intelligence and role-based portals.",
     summary:
-      "An automated career discovery and application hub featuring semantic skill parsing, multi-attribute role indexing, and modern interactive dashboards.",
+      "A scalable recruitment hub built with React.js, Node.js, Firebase, and REST APIs, featuring AI-powered resume analysis, role-based interfaces, and performance-optimized React state management.",
     overview: [
-      "FAR eliminates traditional recruitment friction by categorizing job opportunities by technical domain, stack depth, and real eligibility criteria rather than opaque keyword tags.",
-      "Constructed using Next.js and high-efficiency indexing, enabling candidates to filter through hundreds of verified roles with near-instantaneous feedback.",
-      "Engineered with clean responsive cards, deep mobile compatibility, and state synchronization across search parameters.",
+      "Developed a responsive React.js platform connecting students, universities, recruiters, and placement officers through unified, role-based interfaces.",
+      "Engineered reusable React components, interactive applicant dashboards, secure authentication workflows, and REST API integrations for maintainable user experiences.",
+      "Integrated AI-powered resume analysis while optimizing frontend performance using React Hooks, lazy loading, and efficient state management.",
+    ],
+    resumeBullets: [
+      "Developed a responsive React.js platform connecting students, universities, recruiters, and placement officers through role-based interfaces.",
+      "Built reusable React components, dashboards, authentication workflows, and REST API integrations for maintainable user experiences.",
+      "Integrated AI-powered resume analysis while optimizing frontend performance using React Hooks and efficient state management.",
     ],
     problem:
-      "Early-career software engineers and students waste hundreds of hours navigating bloated recruitment portals plagued with stale job listings, irrelevant keyword matching, and unresponsive mobile experiences.",
+      "University placement drives suffer from disconnected communication between student applicants, college placement officers, and company recruiters. Manually parsing hundreds of resumes is slow, error-prone, and leads to hiring mismatches.",
     solution:
-      "Created a lean, high-velocity talent matching platform with categorized engineering verticals, verified application pathways, and low-latency client-side search indexing.",
+      "Built a unified multi-stakeholder ecosystem with dedicated portals for each party, integrated AI-driven resume scoring, and sub-50ms search filtering across candidate rosters.",
     architectureNodes: [
-      { name: "Candidate UI", type: "client", description: "Mobile-first responsive search & filter matrix" },
-      { name: "Search & Filter Engine", type: "service", description: "Multi-dimensional attribute filter pipeline" },
-      { name: "Semantic Parser", type: "ml", description: "Skill clustering and role taxonomy analyzer" },
-      { name: "Real-time Database", type: "storage", description: "Indexed job documents and user bookmark store" },
-      { name: "Cloud Edge CDN", type: "infra", description: "Global edge caching for instantaneous asset delivery" },
+      { name: "Stakeholder Portals", type: "client", description: "Role-based React.js interfaces for Students, Recruiters, and Officers" },
+      { name: "API & Ingestion Service", type: "gateway", description: "Node.js REST endpoints with Firebase Authentication" },
+      { name: "AI Resume Analyzer", type: "ml", description: "Natural language skill extractor and candidate scoring engine" },
+      { name: "Firestore Candidate Store", type: "storage", description: "Indexed applicant profiles, resumes, and application tracks" },
+      { name: "Firebase Cloud Hosting", type: "infra", description: "Global edge CDN with optimized static bundle hydration" },
     ],
     architectureSummary:
-      "Candidate search inputs trigger cached index evaluation at the edge. The role taxonomy maps raw requirements to standard competency vectors, delivering instant filtered views with zero unnecessary database queries.",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Firebase", "Algorithmic Filtering", "Edge Caching"],
+      "Students submit profile data and resumes which are processed through the AI analysis pipeline. Recruiters and placement officers filter candidates via indexed search queries with instant client-side rendering.",
+    technologies: ["React.js", "Node.js", "Firebase", "REST APIs", "AI", "Tailwind CSS", "React Hooks"],
     engineeringDecisions: [
       {
-        decision: "Client-Side In-Memory Search Indexing for Active Results",
-        rationale: "Delivers sub-15ms interactive filtering experience without network hops on every keystroke.",
-        tradeoff: "Requires efficient index serialization to keep initial payload under 50KB.",
+        decision: "Custom React Hook Architecture for Multi-attribute Filtering",
+        rationale: "Encapsulates filtering and sorting logic, preventing component re-rendering and providing an instant search experience.",
+        tradeoff: "Requires careful memoization of large candidate datasets.",
       },
       {
-        decision: "Optimistic Bookmarking UI State",
-        rationale: "Ensures immediate tactile response when users save or track application deadlines.",
-        tradeoff: "Needs rollback logic if remote sync fails.",
+        decision: "Role-Based Navigation Guards in Frontend and Firestore Rules",
+        rationale: "Guarantees student applicants cannot inspect other candidates' submissions or university administrative data.",
+        tradeoff: "Dual-layer validation needed on both client routers and Firestore access rules.",
       },
     ],
     securityConsiderations: [
-      "Sanitized candidate input to prevent XSS in query parameters.",
-      "Rate-limited application link dispatchers to prevent scraping bots from abusing job source APIs.",
+      "Strict data isolation between competing employer job postings.",
+      "Sanitized resume file ingestion with size and MIME type verification.",
     ],
     challenges: [
-      "Designing responsive filter drawers that remain effortless to manipulate on narrow 360px mobile viewports.",
-      "Structuring job schema models to support diverse engineering disciplines without sparse attribute explosion.",
+      "Building a complex 4-way dashboard structure (Student, Recruiter, University, Officer) without bloated bundle sizes.",
+      "Extracting structured technical skill arrays from unformatted PDF and DOCX resume uploads.",
     ],
     outcomes: [
-      "Live production deployment serving active candidate searches at farfindarole.com.",
-      "Sub-50ms search query response times across multi-tag combinations.",
-      "Mobile-friendly navigation resulting in high return-visitor engagement.",
+      "Live platform operating at farfindarole.com.",
+      "Successfully streamlined multi-university applicant tracking workflows.",
+      "Fast, fluid user experience with high user satisfaction across hiring cycles.",
     ],
     liveUrl: "https://farfindarole.com/",
     githubUrl: "https://github.com/chinnaranga",
     metrics: [
-      { label: "Platform", value: "Career Discovery" },
-      { label: "Latency", value: "< 50ms Edge Filter" },
-      { label: "Status", value: "Production Active" },
+      { label: "Users", value: "4 Roles Connected" },
+      { label: "Intelligence", value: "AI Resume Analysis" },
+      { label: "Deployment", value: "farfindarole.com" },
     ],
     nextSlug: "feasto",
   },
   {
     slug: "feasto",
-    title: "Feasto — Full-Stack Commerce & Dining System",
+    title: "Food Ordering Platform (Feasto)",
     shortTitle: "Feasto",
-    subtitle: "High-Performance Hospitality Tech & Real-Time Menu Orchestration",
+    subtitle: "High-Performance Food Ordering & Dining Platform",
+    period: "Aug 2025 – Nov 2025",
     category: ["Full Stack"],
     featured: true,
     status: "Live Product",
-    tagline: "Modern dining and restaurant exploration platform optimized for zero-latency mobile menus and ordering flows.",
+    tagline: "Responsive dining and food delivery application with restaurant browsing, catalog search, cart workflows, and Razorpay checkout.",
     summary:
-      "A full-stack dining platform providing digital storefronts, synchronized cart states, and rich culinary media optimization for modern restaurants.",
+      "A responsive React.js food ordering application built with Node.js, Firebase, and Razorpay, featuring dynamic restaurant browsing, product search, cart state management, and secure checkout workflows.",
     overview: [
-      "Feasto was designed to address sluggish digital menus and clunky checkout pipelines in hospitality tech. By leveraging modern React primitives and SSR caching, pages load in under 1 second.",
-      "Features dynamic category switching, live order calculations, responsive layout transitions, and high-fidelity product imagery.",
-      "Built with scalable component architecture and modular design tokens, making it straightforward to re-skin for distinct culinary brands.",
+      "Developed a responsive React.js food ordering application with restaurant browsing, product search, cart management, and seamless checkout workflows.",
+      "Built reusable UI components and REST API integrations while implementing Firebase Authentication, Cloud Firestore, and Razorpay payment processing.",
+      "Optimized responsive layouts and frontend performance using React Hooks, local state caching, and modern web development best practices.",
+    ],
+    resumeBullets: [
+      "Developed a responsive React.js food ordering application with restaurant browsing, product search, cart, and checkout workflows.",
+      "Built reusable components and REST API integrations while implementing Firebase Authentication, Firestore, and Razorpay.",
+      "Optimized responsive layouts and frontend performance using React Hooks and modern development practices.",
     ],
     problem:
-      "Restaurant digital menus often fail during peak dining hours due to heavy unoptimized images, slow JavaScript bundles, and state loss when users switch between dietary categories.",
+      "Mobile restaurant ordering experiences often break down on slower cellular connections due to sluggish cart updates, heavy assets, and payment checkout drop-offs.",
     solution:
-      "Engineered an ultra-lean digital menu system with progressive image hydration, local state preservation, and zero-runtime CSS layouts that perform smoothly even on spotty mobile data connections.",
+      "Created an ultra-fast food ordering web app with instant cart state persistence, optimized search indexing, and a streamlined Razorpay checkout pipeline.",
     architectureNodes: [
-      { name: "Customer Client", type: "client", description: "Progressive mobile web application with instant cart" },
-      { name: "Catalog SSR Server", type: "service", description: "Next.js edge renderer with stale-while-revalidate" },
-      { name: "Order State Machine", type: "service", description: "Deterministic cart and discount calculator" },
-      { name: "Menu Store", type: "storage", description: "Document store for items, variants, and addons" },
-      { name: "Global CDN", type: "infra", description: "Image optimization pipeline for high-DPI retina screens" },
+      { name: "Customer Web App", type: "client", description: "Responsive React.js application with instant cart reducer" },
+      { name: "Node.js REST Service", type: "service", description: "Menu catalog dispatch, order validation, and checkout orchestration" },
+      { name: "Payment Gateway", type: "gateway", description: "Razorpay secure payment processing with webhook order confirmation" },
+      { name: "Firestore Order Store", type: "storage", description: "Real-time order statuses, cart items, and restaurant menus" },
+      { name: "Firebase CDN", type: "infra", description: "Asset optimization pipeline delivering sub-second load times" },
     ],
     architectureSummary:
-      "Menu catalogs are statically pre-rendered and updated using on-demand revalidation. Cart actions operate through a deterministic client state reducer, allowing seamless offline-to-online transitions.",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase", "State Reducers", "Web Vitals Optimization"],
+      "Users browse restaurant menus with instant search filtering. Cart modifications operate locally through state reducers, with checkout transitioning to Razorpay and order confirmation stored in Firestore.",
+    technologies: ["React.js", "Node.js", "Firebase", "Razorpay", "REST APIs", "Tailwind CSS", "React Hooks"],
     engineeringDecisions: [
       {
-        decision: "Zero-Layout-Shift Image Sizing Containers",
-        rationale: "Eliminates frustrating content jumps when scrolling through high-resolution dish photos on mobile.",
-        tradeoff: "Requires fixed aspect ratio specifications in data models.",
+        decision: "Razorpay Webhook Handshake for Order State Verification",
+        rationale: "Prevents fraudulent order creation by validating cryptographic signatures from Razorpay before writing final paid order states to Firestore.",
+        tradeoff: "Requires webhook endpoint resilience against retry storms.",
       },
       {
-        decision: "Local Storage Cart Hydration",
-        rationale: "Prevents accidental order loss when a patron switches apps or answers a call.",
-        tradeoff: "Requires schema versioning to handle price or menu updates.",
+        decision: "Optimistic Cart State Management",
+        rationale: "Provides zero-latency tactile feedback when users increment or customize dishes during ordering.",
+        tradeoff: "Needs local rollback if line-item validation fails.",
       },
     ],
     securityConsiderations: [
-      "Validation of cart line-items and totals against authoritative server price lists.",
-      "Sanitized order payloads preventing prototype pollution during checkout payload dispatch.",
+      "Server-side price and total verification preventing client-side cart tampering.",
+      "HMAC SHA-256 signature verification on all Razorpay payment confirmation payloads.",
     ],
     challenges: [
-      "Balancing rich photography with strict Core Web Vitals (LCP < 1.2s) on throttled 4G mobile networks.",
-      "Handling complex item variants (spice levels, portion sizes, add-ons) with clean state representation.",
+      "Managing complex food customization states (addons, portion sizes, spice levels) within a clean, intuitive mobile cart.",
+      "Ensuring fluid 60fps scrolling across image-heavy multi-restaurant menus.",
     ],
     outcomes: [
-      "Live production deployment running at feasto.food.",
-      "Achieved 95+ Google Lighthouse mobile performance score.",
-      "Zero layout shift (CLS = 0) during fast catalog scrolling.",
+      "Live deployment operating at feasto.food.",
+      "Integrated seamless Razorpay payment flows with zero checkout friction.",
+      "Mobile-optimized responsive UX with 95+ Lighthouse performance scores.",
     ],
     liveUrl: "https://feasto.food/",
     githubUrl: "https://github.com/chinnaranga",
     metrics: [
-      { label: "Core Web Vitals", value: "95+ Lighthouse" },
-      { label: "Layout Shift", value: "0.0 CLS" },
-      { label: "Architecture", value: "SSR + SWR" },
-    ],
-    nextSlug: "healthchain",
-  },
-  {
-    slug: "credit-risk-ml",
-    title: "Credit Risk & Financial Default Prediction Pipeline",
-    shortTitle: "Credit Risk ML",
-    subtitle: "Automated Supervised Learning Pipeline for Credit Risk Scoring",
-    category: ["AI / ML"],
-    featured: false,
-    status: "Validated Model",
-    tagline: "Feature-engineered machine learning classifier evaluating multi-variable loan default probabilities.",
-    summary:
-      "An end-to-end data science pipeline built with Python, scikit-learn, and ensemble trees to forecast borrower default likelihood with high precision.",
-    overview: [
-      "Developed as part of extensive industrial fintech research to explore model interpretability in credit scoring.",
-      "Implements rigorous exploratory data analysis (EDA), missing value imputation using median/mode strategies, outlier clipping, and correlation matrix pruning.",
-      "Trained Random Forest and Gradient Boosted models, fine-tuning hyperparameter grids to minimize False Negative rates.",
-    ],
-    problem:
-      "Conventional credit approval heuristics either reject viable borrowers or fail to capture nonlinear correlations across debt-to-income and employment duration factors.",
-    solution:
-      "Built an ensemble model pipeline incorporating automated scaling, categorical encoding, and cross-validated threshold calibration for financial risk assessment.",
-    architectureNodes: [
-      { name: "Raw Data Ingestion", type: "storage", description: "Multi-variable financial applicant dataset" },
-      { name: "Pre-processing Pipeline", type: "service", description: "Imputation, robust scaling, One-Hot encoding" },
-      { name: "Feature Selection", type: "ml", description: "Correlation thresholding & recursive feature elimination" },
-      { name: "Ensemble Classifier", type: "ml", description: "Random Forest & XGBoost with grid search tuning" },
-      { name: "Evaluation & Metric Export", type: "client", description: "Confusion matrix, ROC-AUC curve & SHAP values" },
-    ],
-    architectureSummary:
-      "Data passes through scikit-learn pipeline transformers before feeding into tuned tree ensembles. Predictions output continuous risk probability scores alongside classification labels.",
-    technologies: ["Python", "scikit-learn", "Pandas", "NumPy", "XGBoost", "Matplotlib", "Seaborn"],
-    engineeringDecisions: [
-      {
-        decision: "Prioritizing Recall on Default Class over Raw Accuracy",
-        rationale: "In credit scoring, False Negatives (approving a defaulting loan) carry dramatically higher financial loss than False Positives.",
-        tradeoff: "Slight reduction in overall precision for conservative risk safety.",
-      },
-    ],
-    securityConsiderations: [
-      "De-identification of personal applicant records before model training.",
-      "Fairness auditing to prevent proxy bias across demographic attributes.",
-    ],
-    challenges: [
-      "Handling severe class imbalance between successful repayments and defaults without causing model overfitting.",
-    ],
-    outcomes: [
-      "Achieved 82% validation accuracy with an ROC-AUC score of 0.86.",
-      "Created modular scikit-learn preprocessing classes reusable across tabular prediction tasks.",
-    ],
-    githubUrl: "https://github.com/chinnaranga",
-    metrics: [
-      { label: "Accuracy", value: "82% Test Split" },
-      { label: "ROC-AUC", value: "0.86 Score" },
-      { label: "Core Model", value: "Random Forest" },
-    ],
-    nextSlug: "traffic-flow-prediction",
-  },
-  {
-    slug: "traffic-flow-prediction",
-    title: "Hyderabad Urban Traffic Density Predictor",
-    shortTitle: "Traffic Predictor",
-    subtitle: "Spatiotemporal Congestion Modeling for Urban Corridors",
-    category: ["AI / ML", "Experiments"],
-    featured: false,
-    status: "Research Prototype",
-    tagline: "Time-series forecasting prototype exploring congestion bottlenecks across Hyderabad arterial transit nodes.",
-    summary:
-      "An exploratory intelligence system designed to model vehicle density fluctuations and forecast peak congestion intervals across key urban intersections.",
-    overview: [
-      "Explores spatiotemporal traffic telemetry to understand how peak hours and intersection bottlenecks propagate across adjacent arterial corridors.",
-      "Applies moving average convolutions, lag feature engineering, and recurrent architectures to model transit flow.",
-    ],
-    problem:
-      "Urban traffic management centers rely on reactive camera inspection rather than predictive warning signals, leading to gridlock during unexpected transit spikes.",
-    solution:
-      "Developed a predictive pipeline that analyzes historical traffic speed patterns to forecast intersection load 30 to 60 minutes in advance.",
-    architectureNodes: [
-      { name: "Traffic Log Importer", type: "storage", description: "Sensor telemetry and timestamped speed records" },
-      { name: "Time-Series Transformer", type: "service", description: "Rolling-window feature creation and seasonal lag" },
-      { name: "Forecasting Model", type: "ml", description: "LightGBM regressor with spatial adjacency weights" },
-      { name: "Congestion Heatmap UI", type: "client", description: "Leaflet geo-coordinate density visualizer" },
-    ],
-    architectureSummary:
-      "Sensor readings are resampled into 15-minute time windows, enriched with cyclical temporal features, and passed to a gradient-boosted regressor that outputs congestion probability vectors.",
-    technologies: ["Python", "PyTorch", "Pandas", "LightGBM", "Leaflet", "GeoJSON"],
-    engineeringDecisions: [
-      {
-        decision: "Gradient Boosted Trees over Heavy Deep LSTMs for Tabular Sensor Inputs",
-        rationale: "LightGBM delivered faster training iteration cycles and superior handling of missing sensor telemetry points.",
-        tradeoff: "Required manual spatial coordinate lag feature creation.",
-      },
-    ],
-    securityConsiderations: [
-      "Aggregation of sensor data to eliminate vehicle identification tracking.",
-    ],
-    challenges: [
-      "Handling erratic sensor dropouts during extreme weather and irregular holiday transit variations.",
-    ],
-    outcomes: [
-      "Successfully modeled predictive delay indicators on simulated arterial corridor datasets.",
-      "Published reproducible Jupyter analysis workflows for urban density evaluation.",
-    ],
-    githubUrl: "https://github.com/chinnaranga",
-    metrics: [
-      { label: "Forecast Window", value: "30-60 Mins" },
-      { label: "Model", value: "LightGBM Regressor" },
-      { label: "Domain", value: "Smart City" },
+      { label: "Payments", value: "Razorpay Integrated" },
+      { label: "Deployment", value: "feasto.food" },
+      { label: "Architecture", value: "React + Node + Firebase" },
     ],
     nextSlug: "healthchain",
   },

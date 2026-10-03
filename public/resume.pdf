@@ -15,60 +15,75 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 6 0 obj
-<< /Length 5527 >>
+<< /Length 6478 >>
 stream
-BT /F1 20 Tf 0.05 g 1 0 0 1 50 745 Tm (RAVIPATI CHINNA RANGASWAMY REDDY) Tj ET
-BT /F1 10 Tf 0.2 g 1 0 0 1 50 730 Tm (MACHINE LEARNING ENGINEER | FULL-STACK DEVELOPER | HEALTHCARE TECH BUILDER) Tj ET
-BT /F2 9 Tf 0.35 g 1 0 0 1 50 716 Tm (Hyderabad, India  |  ravipatichinnarangaswamyreddy@gmail.com  |  github.com/chinnaranga  |  linkedin.com/in/r-chinna-ranga-swamy-reddy-b371272b9) Tj ET
-0.75 G 0.75 w 50 706 m 562 706 l S
-BT /F1 11 Tf 0.1 g 1 0 0 1 50 690 Tm (PROFESSIONAL SUMMARY) Tj ET
-0.85 G 0.5 w 50 686 m 562 686 l S
-BT /F2 9 Tf 0.2 g 1 0 0 1 50 672 Tm (Results-driven Machine Learning Engineer and Full-Stack Developer focused on building end-to-end intelligent software platforms.) Tj ET
-BT /F2 9 Tf 0.2 g 1 0 0 1 50 659 Tm (Demonstrated expertise in deploying supervised predictive machine learning pipelines \(82% accuracy in financial risk benchmarks\) and) Tj ET
-BT /F2 9 Tf 0.2 g 1 0 0 1 50 646 Tm (architecting high-performance Next.js 16 single-page web applications with stateless authentication and Cloud Firestore clusters.) Tj ET
-BT /F1 11 Tf 0.1 g 1 0 0 1 50 624 Tm (EDUCATION) Tj ET
-0.85 G 0.5 w 50 620 m 562 620 l S
-BT /F1 10 Tf 0.1 g 1 0 0 1 50 606 Tm (Woxsen University, Hyderabad, India) Tj ET
-BT /F2 9 Tf 0.3 g 1 0 0 1 480 606 Tm (2023 - 2027) Tj ET
-BT /F2 9.5 Tf 0.15 g 1 0 0 1 50 593 Tm (Bachelor of Engineering in Computer Science and Engineering \(B.E. CSE\)) Tj ET
-BT /F2 8.5 Tf 0.35 g 1 0 0 1 50 580 Tm (Key Coursework: Machine Learning, Data Structures & Algorithms, Computer Vision, Distributed Big Data Systems, Database Systems) Tj ET
-BT /F1 11 Tf 0.1 g 1 0 0 1 50 558 Tm (TECHNICAL SKILLS) Tj ET
-0.85 G 0.5 w 50 554 m 562 554 l S
-BT /F1 9 Tf 0.15 g 1 0 0 1 50 540 Tm (Machine Learning & AI:) Tj ET
-BT /F2 9 Tf 0.25 g 1 0 0 1 180 540 Tm (Python, PyTorch, scikit-learn, LightGBM, XGBoost, Pandas, NumPy, FastAPI, Model Serving) Tj ET
-BT /F1 9 Tf 0.15 g 1 0 0 1 50 526 Tm (Full-Stack Engineering:) Tj ET
-BT /F2 9 Tf 0.25 g 1 0 0 1 180 526 Tm (React 19, Next.js 16, TypeScript, Node.js, Express, REST APIs, Tailwind CSS v4, Redux) Tj ET
-BT /F1 9 Tf 0.15 g 1 0 0 1 50 512 Tm (Cloud, DevOps & Data:) Tj ET
-BT /F2 9 Tf 0.25 g 1 0 0 1 180 512 Tm (Docker, Firebase Auth, Cloud Firestore, PostgreSQL, AWS, GCP, Git, GitHub Actions, CI/CD) Tj ET
-BT /F1 9 Tf 0.15 g 1 0 0 1 50 498 Tm (Healthcare Systems:) Tj ET
-BT /F2 9 Tf 0.25 g 1 0 0 1 180 498 Tm (Clinical EMR Schemas, Unique Patient IDs, OTP Verification, Tamper-Evident Hash Audit Logs) Tj ET
-BT /F1 11 Tf 0.1 g 1 0 0 1 50 476 Tm (PRODUCTION PROJECTS) Tj ET
-0.85 G 0.5 w 50 472 m 562 472 l S
-BT /F1 10 Tf 0.1 g 1 0 0 1 50 458 Tm (HealthChain - Decentralized Healthcare Clinical Platform) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 470 458 Tm (healthcare-edb75.web.app) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 445 Tm (- Built a zero-trust clinical EMR access system featuring OTP-verified multi-factor patient identity consent.) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 434 Tm (- Engineered tamper-evident medical record verification using client-side SHA-256 integrity hash chains.) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 423 Tm (- Deployed on Firebase with strict document-level Firestore rules, achieving sub-200ms record retrieval times.) Tj ET
-BT /F1 10 Tf 0.1 g 1 0 0 1 50 407 Tm (FAR \(Find a Role\) - Career Discovery & Talent Matching Engine) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 495 407 Tm (farfindarole.com) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 394 Tm (- Created low-latency engineering career exploration platform with multi-attribute candidate search indexing.) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 383 Tm (- Designed semantic skill clustering and role taxonomy parser to surface relevant job matches under 50ms.) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 372 Tm (- Optimized mobile layout and responsive state caching, serving active live production traffic.) Tj ET
-BT /F1 10 Tf 0.1 g 1 0 0 1 50 356 Tm (Feasto - Full-Stack Dining & Hospitality Platform) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 505 356 Tm (feasto.food) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 343 Tm (- Engineered responsive digital food menu and ordering platform with zero layout shift \(CLS = 0.0\).) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 332 Tm (- Implemented deterministic cart state reducers with local storage caching for offline-resilient ordering.) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 321 Tm (- Reached 95+ mobile Google Lighthouse performance score via aggressive SSR image pre-hydration.) Tj ET
-BT /F1 11 Tf 0.1 g 1 0 0 1 50 299 Tm (ENGINEERING EXPERIENCE) Tj ET
-0.85 G 0.5 w 50 295 m 562 295 l S
-BT /F1 10 Tf 0.1 g 1 0 0 1 50 281 Tm (Frontend & Full-Stack Developer | Contracts & Product Builds) Tj ET
-BT /F2 8.5 Tf 0.3 g 1 0 0 1 465 281 Tm (Jun 2025 - Present) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 268 Tm (- Architected reactive single-page applications with Next.js 16 and TypeScript, standardizing modular components.) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 257 Tm (- Built stateless authentication gates with Cloud Firestore security rules for medical and career dashboards.) Tj ET
-BT /F1 10 Tf 0.1 g 1 0 0 1 50 241 Tm (Machine Learning & Data Science Engineer | Applied ML Projects) Tj ET
-BT /F2 8.5 Tf 0.3 g 1 0 0 1 460 241 Tm (Aug 2025 - Nov 2025) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 228 Tm (- Formulated supervised ensemble models \(Random Forest, LightGBM\) to forecast credit risk probability distributions.) Tj ET
-BT /F2 8.5 Tf 0.25 g 1 0 0 1 60 217 Tm (- Optimized default risk recall threshold, achieving 82% validation accuracy with 0.86 ROC-AUC score.) Tj ET
+BT /F1 18 Tf 0.05 g 1 0 0 1 50 750 Tm (Ravipati Chinna Rangaswamy Reddy) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 50 736 Tm (Hyderabad, India  |  \(+91\) 7702484883  |  ravipatichinnarangaswamyreddy@gmail.com) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 50 724 Tm (GitHub: github.com/chinnaranga  |  Portfolio: ravipatichinna.com  |  LinkedIn: linkedin.com/in/r-chinna-ranga-swamy-reddy-b371272b9) Tj ET
+0.75 G 0.75 w 50 715 m 562 715 l S
+BT /F1 10.5 Tf 0.1 g 1 0 0 1 50 700 Tm (Professional Summary) Tj ET
+0.8 G 0.5 w 50 697 m 562 697 l S
+BT /F2 8.5 Tf 0.2 g 1 0 0 1 50 686 Tm (Computer Science undergraduate at Woxsen University with hands-on experience building responsive and scalable web applications) Tj ET
+BT /F2 8.5 Tf 0.2 g 1 0 0 1 50 675 Tm (using JavaScript, React.js, HTML5, CSS3, Node.js, Firebase, and REST APIs. Experienced in developing reusable React components,) Tj ET
+BT /F2 8.5 Tf 0.2 g 1 0 0 1 50 664 Tm (responsive user interfaces, role-based experiences, API integrations, authentication workflows, and performance-focused frontend) Tj ET
+BT /F2 8.5 Tf 0.2 g 1 0 0 1 50 653 Tm (applications. Strong foundation in Data Structures, Algorithms, Object-Oriented Programming, DBMS, and Software Engineering,) Tj ET
+BT /F2 8.5 Tf 0.2 g 1 0 0 1 50 642 Tm (with a focus on building maintainable, user-friendly web experiences.) Tj ET
+BT /F1 10.5 Tf 0.1 g 1 0 0 1 50 624 Tm (Education) Tj ET
+0.8 G 0.5 w 50 621 m 562 621 l S
+BT /F1 9.5 Tf 0.1 g 1 0 0 1 50 610 Tm (Woxsen University, Hyderabad) Tj ET
+BT /F2 8.5 Tf 0.3 g 1 0 0 1 480 610 Tm (Aug 2023 - Apr 2027) Tj ET
+BT /F2 9 Tf 0.15 g 1 0 0 1 50 599 Tm (Bachelor of Engineering in Computer Science) Tj ET
+BT /F1 8.5 Tf 0.1 g 1 0 0 1 495 599 Tm (CGPA: 7.8/10) Tj ET
+BT /F2 8 Tf 0.3 g 1 0 0 1 50 588 Tm (Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems,) Tj ET
+BT /F2 8 Tf 0.3 g 1 0 0 1 50 578 Tm (Computer Networks, Software Engineering) Tj ET
+BT /F1 10.5 Tf 0.1 g 1 0 0 1 50 560 Tm (Technical Skills) Tj ET
+0.8 G 0.5 w 50 557 m 562 557 l S
+BT /F1 8.5 Tf 0.15 g 1 0 0 1 50 546 Tm (Languages:) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 140 546 Tm (JavaScript, Python, Java, SQL) Tj ET
+BT /F1 8.5 Tf 0.15 g 1 0 0 1 50 534 Tm (Frontend:) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 140 534 Tm (React.js, HTML5, CSS3, React Hooks, React Router, Vite, Tailwind CSS, Responsive Web Design) Tj ET
+BT /F1 8.5 Tf 0.15 g 1 0 0 1 50 522 Tm (Backend & APIs:) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 140 522 Tm (Node.js, Express.js, REST APIs, WebSockets) Tj ET
+BT /F1 8.5 Tf 0.15 g 1 0 0 1 50 510 Tm (Databases:) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 140 510 Tm (PostgreSQL, MySQL, MongoDB, Firebase Firestore) Tj ET
+BT /F1 8.5 Tf 0.15 g 1 0 0 1 50 498 Tm (Tools & Cloud:) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 140 498 Tm (Git, GitHub, Docker, Firebase, AWS, Postman) Tj ET
+BT /F1 8.5 Tf 0.15 g 1 0 0 1 50 486 Tm (Core:) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 140 486 Tm (Data Structures, Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks, System Design, Agile) Tj ET
+BT /F1 10.5 Tf 0.1 g 1 0 0 1 50 468 Tm (Projects) Tj ET
+0.8 G 0.5 w 50 465 m 562 465 l S
+BT /F1 9.5 Tf 0.1 g 1 0 0 1 50 454 Tm (FarFindARole - AI-Powered Recruitment Platform) Tj ET
+BT /F1 8.5 Tf 0.2 g 1 0 0 1 335 454 Tm (farfindarole.com) Tj ET
+BT /F2 8.5 Tf 0.3 g 1 0 0 1 475 454 Tm (Jan 2025 - Jan 2026) Tj ET
+BT /F2 8 Tf 0.35 g 1 0 0 1 50 443 Tm (React.js, Node.js, Firebase, REST APIs, AI) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 432 Tm (- Developed a responsive React.js platform connecting students, universities, recruiters, and placement officers through role-based) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 66 422 Tm (interfaces.) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 411 Tm (- Built reusable React components, dashboards, authentication workflows, and REST API integrations for maintainable user) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 66 401 Tm (experiences.) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 390 Tm (- Integrated AI-powered resume analysis while optimizing frontend performance using React Hooks and efficient state management.) Tj ET
+BT /F1 9.5 Tf 0.1 g 1 0 0 1 50 375 Tm (HealthChain - AI-Powered Healthcare Platform) Tj ET
+BT /F1 8.5 Tf 0.2 g 1 0 0 1 325 375 Tm (healthchain.co.in) Tj ET
+BT /F2 8.5 Tf 0.3 g 1 0 0 1 475 375 Tm (Aug 2025 - Present) Tj ET
+BT /F2 8 Tf 0.35 g 1 0 0 1 50 364 Tm (React.js, Vite, Tailwind CSS, React Router, Node.js, Express.js, REST APIs, WebSockets, Firebase) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 353 Tm (- Developed a responsive React.js healthcare platform with role-based dashboards for Patients, Doctors, Clinical Staff, and) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 66 343 Tm (Administrators.) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 332 Tm (- Built reusable React components and modular frontend architecture using React Router and Tailwind CSS, integrating REST) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 66 322 Tm (APIs and WebSockets for application workflows.) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 311 Tm (- Implemented Firebase Authentication with PostgreSQL and Firestore data workflows, along with role-based access controls for) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 66 301 Tm (secure user experiences.) Tj ET
+BT /F1 9.5 Tf 0.1 g 1 0 0 1 50 286 Tm (Food Ordering Platform) Tj ET
+BT /F1 8.5 Tf 0.2 g 1 0 0 1 230 286 Tm (feasto.food) Tj ET
+BT /F2 8.5 Tf 0.3 g 1 0 0 1 475 286 Tm (Aug 2025 - Nov 2025) Tj ET
+BT /F2 8 Tf 0.35 g 1 0 0 1 50 275 Tm (React.js, Node.js, Firebase, Razorpay, REST APIs) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 264 Tm (- Developed a responsive React.js food ordering application with restaurant browsing, product search, cart, and checkout workflows.) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 253 Tm (- Built reusable components and REST API integrations while implementing Firebase Authentication, Firestore, and Razorpay.) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 242 Tm (- Optimized responsive layouts and frontend performance using React Hooks and modern development practices.) Tj ET
+BT /F1 10.5 Tf 0.1 g 1 0 0 1 50 224 Tm (Certifications) Tj ET
+0.8 G 0.5 w 50 221 m 562 221 l S
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 210 Tm (- Prompt Engineering - OpenAI) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 198 Tm (- Python for Data Science - IBM) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 186 Tm (- Python Essentials 1 - Cisco Networking Academy) Tj ET
+BT /F2 8.5 Tf 0.25 g 1 0 0 1 58 174 Tm (- Network Security & Database Vulnerabilities - Coursera) Tj ET
 
 endstream
 endobj
@@ -84,5 +99,5 @@ xref
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-5975
+6926
 %%EOF

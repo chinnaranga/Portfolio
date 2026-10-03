@@ -6,12 +6,14 @@ export interface SiteConfig {
   subheadline: string;
   location: string;
   email: string;
+  phone: string;
   socials: {
     github: string;
     githubHandle: string;
     linkedin: string;
     linkedinHandle: string;
     email: string;
+    portfolio: string;
   };
   status: {
     indicator: "active" | "building" | "learning";
@@ -29,32 +31,39 @@ export interface SiteConfig {
     institution: string;
     location: string;
     period: string;
+    cgpa: string;
     description: string;
-    coursework: { name: string; focus: string }[];
+    coursework: string[];
   };
+  certifications: {
+    title: string;
+    issuer: string;
+  }[];
 }
 
 export const siteConfig: SiteConfig = {
   name: "Ravipati Chinna Rangaswamy Reddy",
   shortName: "Ranga",
   tagline: "Machine Learning Engineer · Full-Stack Developer · Healthcare Tech Builder",
-  headline: "Building intelligent software systems & production platforms at scale.",
+  headline: "Building responsive, intelligent web applications and scalable software systems.",
   subheadline:
-    "I build intelligent software systems and production-ready digital products across AI, full-stack engineering, and healthcare technology.",
+    "Computer Science undergraduate at Woxsen University with hands-on experience building responsive and scalable web applications using JavaScript, React.js, Node.js, Firebase, REST APIs, and machine learning pipelines.",
   location: "Hyderabad, India",
   email: "ravipatichinnarangaswamyreddy@gmail.com",
+  phone: "(+91) 7702484883",
   socials: {
     github: "https://github.com/chinnaranga",
     githubHandle: "chinnaranga",
     linkedin: "https://www.linkedin.com/in/r-chinna-ranga-swamy-reddy-b371272b9/",
     linkedinHandle: "r-chinna-ranga-swamy-reddy",
     email: "mailto:ravipatichinnarangaswamyreddy@gmail.com",
+    portfolio: "https://ravipatichinna.com",
   },
   status: {
     indicator: "active",
     label: "CURRENT STATUS",
-    currentFocus: "Architecting decentralized healthcare workflows & clinical intelligence",
-    stack: ["NEXT.JS 16", "PYTHON", "FASTAPI", "PYTORCH", "FIRESTORE", "DOCKER"],
+    currentFocus: "Engineering role-based healthcare workflows & AI career platforms",
+    stack: ["REACT.JS", "NODE.JS", "PYTHON", "FIREBASE", "POSTGRESQL", "REST APIS"],
     availability: "Open to software engineering / ML opportunities",
   },
   navigation: [
@@ -66,33 +75,26 @@ export const siteConfig: SiteConfig = {
     { label: "Contact", href: "#contact" },
   ],
   education: {
-    degree: "B.E. in Computer Science and Engineering",
+    degree: "Bachelor of Engineering in Computer Science",
     institution: "Woxsen University",
     location: "Hyderabad, India",
-    period: "2023 – 2027",
+    period: "Aug 2023 – Apr 2027",
+    cgpa: "7.8/10",
     description:
-      "Core focus on machine learning systems, algorithmic optimization, distributed architecture, and data engineering foundations.",
+      "Rigorous computer science curriculum with deep foundations in data structures, algorithms, object-oriented programming, database management systems, operating systems, and computer networks.",
     coursework: [
-      {
-        name: "Machine Learning",
-        focus: "Supervised & unsupervised models, gradient optimization, loss landscapes, evaluation matrices",
-      },
-      {
-        name: "Data Structures & Algorithms",
-        focus: "Graph algorithms, dynamic programming, asymptotic complexity analysis, memory cache locality",
-      },
-      {
-        name: "Computer Vision",
-        focus: "CNN feature extractors, spatial convolutions, image transformations, detection pipelines",
-      },
-      {
-        name: "Distributed & Big Data Systems",
-        focus: "MapReduce paradigms, partition schemes, scale-out storage, stateless microservices",
-      },
-      {
-        name: "Database Management Systems",
-        focus: "Relational indexing (B-Trees), ACID guarantees, NoSQL document modeling, concurrency controls",
-      },
+      "Data Structures & Algorithms",
+      "Object-Oriented Programming",
+      "Database Management Systems",
+      "Operating Systems",
+      "Computer Networks",
+      "Software Engineering",
     ],
   },
+  certifications: [
+    { title: "Prompt Engineering", issuer: "OpenAI" },
+    { title: "Python for Data Science", issuer: "IBM" },
+    { title: "Python Essentials 1", issuer: "Cisco Networking Academy" },
+    { title: "Network Security & Database Vulnerabilities", issuer: "Coursera" },
+  ],
 };
